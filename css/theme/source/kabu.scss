@@ -1,0 +1,75 @@
+/**
+ * Kabu theme for reveal.js. http://cb-kabu.herokuapp.com/
+ *
+ * Copyright (C) 2015 Zachary Welch
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@import url(../../lib/font/source-sans-pro/source-sans-pro.css);
+
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: #28353d;
+
+$mainColor: #fff;
+$headingColor: #fff;
+
+$mainFontSize: 38px;
+$mainFont: 'Source Sans Pro', Helvetica, sans-serif;
+$headingFont: 'Source Sans Pro', Helvetica, sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: uppercase;
+$headingFontWeight: 600;
+$linkColor: #63b6e5;
+$linkColorHover: #8fcaec;
+$selectionBackgroundColor: lighten( $linkColor, 25% );
+
+$heading1Size: 2.5em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1.0em;
+
+section.has-light-background {
+  &, h1, h2, h3, h4, h5, h6 {
+    color: #28353d;
+  }
+}
+
+.reveal .slides section .fragment {
+
+  &.highlight-red.visible {
+    color: #ee6565 !important;
+  }
+
+  &.highlight-green.visible {
+    color: #56b881;
+  }  
+
+  &.highlight-blue.visible {
+    color: #3887be;
+  }  
+
+  &.highlight-current-red.current-fragment {
+    color: #ee6565 !important;
+  }
+
+  &.highlight-current-green.current-fragment {
+    color: #56b881;
+  }
+
+  &.highlight-current-blue.current-fragment {
+    color: #3887be;
+  }
+}
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
